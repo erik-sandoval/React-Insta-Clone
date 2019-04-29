@@ -1,0 +1,18 @@
+.search-bar {
+    border         : 1px solid red;
+    display        : flex;
+    width          : 500px;
+    height         : 40px;
+    justify-content: space-evenly;
+    align-items    : center;
+
+    .fab {
+        font-size: 30px;
+    }
+
+    .far {
+        margin   : 0 5px;
+        font-size: 30px;
+    }
+
+}
