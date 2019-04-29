@@ -3,9 +3,9 @@ import React from 'react'
 const UserMenu = () => {
     return (
         <div>
-            <i class="far fa-compass"></i>
-            <i class="far fa-heart"></i>
-            <i class="far fa-user-circle"></i>
+            <i className="far fa-compass"></i>
+            <i className="far fa-heart"></i>
+            <i className="far fa-user-circle"></i>
         </div>
     )
 }
