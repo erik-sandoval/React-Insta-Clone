@@ -4,10 +4,10 @@ const Likes = (props) => {
     return (
         <div className="likes">
             <div>
-                <i class="far fa-heart"></i>
+                <i onClick={props.like} className="far fa-heart"></i>
                 <i className="far fa-comment"></i>
             </div>
-            <p>{props.post.likes} likes</p>
+            <p>{props.post} likes</p>
         </div>
     )
 }
