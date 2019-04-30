@@ -2,9 +2,9 @@ import React from 'react'
 
 const Username = props => {
     return (
-        <div>
-            <img src={props.profile.thumbnailUrl} />
-            {props.profile.username}
+        <div className="user-name">
+            <img src={props.profile.thumbnailUrl} alt="instagram user" />
+            <p>{props.profile.username}</p>
         </div>
     )
 }
