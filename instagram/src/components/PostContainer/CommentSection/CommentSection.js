@@ -47,14 +47,12 @@ class CommentSection extends React.Component {
     }
 
     addLike = () => {
-
         this.setState({
             likes: this.state.likes + 1
         })
     }
 
     render() {
-        console.log(this.state.likes)
         return (
             <div className="comments">
                 <Likes like={this.addLike} post={this.state.likes} />

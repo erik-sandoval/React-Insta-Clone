@@ -4,14 +4,22 @@ import Logo from './Logo';
 import UserMenu from './UserMenu';
 import './SearchBar.scss'
 
-const MainBar = () => {
-    return (
-        <div className="search-bar">
-            <Logo />
-            <SearchBar />
-            <UserMenu />
-        </div>
-    )
+class MainBar extends React.Component {
+
+    render() {
+        
+        return (
+            <div className="search-bar">
+                <Logo />
+                <SearchBar
+                    users={this.props.users}
+                    onChange={this.props.onChange}
+                    onSubmit={this.props.onSubmit}
+                />
+                <UserMenu />
+            </div>
+        )
+    }
 }
 
 export default MainBar

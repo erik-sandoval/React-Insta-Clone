@@ -5,20 +5,24 @@ import CommentSection from './CommentSection/CommentSection';
 import './PostContainer.scss'
 
 
-const Post = (props) => {
-    return (
-        <div className="post">
+class Post extends React.Component {
 
-            {props.data.map(profile => (
-                <div key={profile.timestamp}>
-                    <Username profile={profile} />
-                    <Image profile={profile} />
-                    <CommentSection profile={profile} />
-                </div>
-            ))}
-        </div>
-    )
+    render() {
+        return (
+            <div className="post">
+                {this.props.data.map(profile => (
+                    <div key={profile.timestamp}>
+                        <Username profile={profile} />
+                        <Image profile={profile} />
+                        <CommentSection profile={profile} />
+                    </div>
+                ))}
+            </div>
+        )
+    }
 }
+
+
 
 
 export default Post
