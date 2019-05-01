@@ -9,7 +9,8 @@ class App extends React.Component {
 
   state = {
     data: [],
-    search: []
+    filteredData: []
+
   }
 
   componentDidMount() {
@@ -20,32 +21,26 @@ class App extends React.Component {
 
   searchFilter = event => {
     console.log(event.target.value)
+
+    const filter = this.state.data.filter(post => {
+      if (post.username.includes(event.target.value)) {
+        return post;
+      }
+    })
     this.setState({
-      search: this.state.data.filter(post => post.username === event.target.value)
+      filteredData: filter
     })
   }
-
-
-  filterSubmit = event => {
-    event.preventDefault()
-    this.setState({
-      data: this.state.search,
-      search: []
-    })
-  }
-
-
 
   render() {
-    console.log(this.state.data.search);
+
     return (
       <div className="App">
         <MainBar
           props={this.state.data}
           onChange={this.searchFilter}
-          onSubmit={this.filterSubmit} />
-
-        <Post data={this.state.data} />
+        />
+        <Post data={this.state.filteredData.length > 0 ? this.state.filteredData : this.state.data} />
 
       </div>
 
