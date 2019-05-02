@@ -29,7 +29,7 @@ class CommentSection extends React.Component {
 
         this.setState({
             comment: {
-                username: 'erik',
+                username: localStorage.getItem('username'),
                 text: event.target.value
             },
         })

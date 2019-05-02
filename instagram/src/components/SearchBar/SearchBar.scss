@@ -11,21 +11,30 @@
     border-bottom  : 1px solid lightgrey;
 
     form {
-        width: 30%;
+        display        : flex;
+        justify-content: space-evenly;
+        width          : 30%;
+
         input {
             width        : 100%;
             border-radius: 2px;
         }
     }
 
-
     .fab {
         font-size: 30px;
     }
 
-    .far {
-        margin   : 0 5px;
-        font-size: 30px;
+    .side-menu {
+        display        : flex;
+        align-items    : center;
+        justify-content: space-evenly;
+
+
+        .far {
+            margin   : 0 5px;
+            font-size: 30px;
+        }
     }
 
 }

@@ -4,7 +4,6 @@ import Image from './Image'
 import CommentSection from './CommentSection/CommentSection';
 import './PostContainer.scss'
 
-
 class Post extends React.Component {
 
     render() {
@@ -21,8 +20,5 @@ class Post extends React.Component {
         )
     }
 }
-
-
-
 
 export default Post
