@@ -1,17 +1,26 @@
 import React from 'react'
+import styled from 'styled-components'
 
+const SearchInput = styled.input`
+            width        : 100%;
+            border-radius: 2px;
+`
 
+const SearchForm = styled.form`
+        display        : flex;
+        justify-content: space-evenly;
+        width          : 30%;
+`
 
 const SearchBar = (props) => {
     return (
-            <form onSubmit={props.onSubmit}>
-                <input
-                    onChange={props.onChange}
-                    type="text"
-                    placeholder="&#xf002; Search"
-                ></input>
-            </form>
-        
+        <SearchForm onSubmit={props.onSubmit}>
+            <SearchInput
+                onChange={props.onChange}
+                type="text"
+                placeholder="Search"
+            ></SearchInput>
+        </SearchForm>
     )
 }
 
