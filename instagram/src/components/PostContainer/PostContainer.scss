@@ -1,53 +1,23 @@
-.post {
-    position: relative;
-    top     : 50px;
-    z-index : 0;
-    margin  : 0 auto;
-    width   : 640px;
+.comments {
 
+    margin-top   : -5px;
+    padding-left : 1%;
+    border       : 1px solid lightgrey;
+    margin-bottom: 1%;
 
-    .user-name {
-        margin-top : .75%;
-        display    : flex;
-        align-items: center;
+    .likes {
         font-weight: 700;
-        border     : 1px solid lightgray;
 
-        img {
-            border-radius: 50%;
-            width        : 50px;
-        }
-
-        p {
-            margin-left: 1%;
+        .far {
+            margin   : 1% 1% 0% 0%;
+            font-size: 25px;
         }
     }
 
-    img {
-        margin-bottom: 0;
+    .comment-user {
+        font-weight: 700;
     }
 
-    .comments {
-
-        margin-top   : -5px;
-        padding-left : 1%;
-        border       : 1px solid lightgrey;
-        margin-bottom: 1%;
-
-        .likes {
-            font-weight: 700;
-
-            .far {
-                margin   : 1% 1% 0% 0%;
-                font-size: 25px;
-            }
-        }
-
-        .comment-user {
-            font-weight: 700;
-        }
-
-    }
 }
 
 .add-comment {

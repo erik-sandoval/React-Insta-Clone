@@ -1,9 +1,14 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const ImageImg = styled.img`
+    margin-bottom: 0;
+`
 
 const Image = props => {
     return (
         <>
-            <img src={props.profile.imageUrl} alt="instagram post"/>
+            <ImageImg src={props.profile.imageUrl} alt="instagram post"/>
         </>
     )
 }

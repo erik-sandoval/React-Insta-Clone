@@ -1,14 +1,23 @@
 import React from 'react'
+import styled from 'styled-components'
+
 import Username from './Username'
 import Image from './Image'
 import CommentSection from './CommentSection/CommentSection';
 import './PostContainer.scss'
 
-class Post extends React.Component {
+const PostDiv = styled.div`
+    position: relative;
+    top     : 50px;
+    z-index : 0;
+    margin  : 0 auto;
+    width   : 640px;
+`
 
+class Post extends React.Component {
     render() {
         return (
-            <div className="post">
+            <PostDiv>
                 {this.props.data.map(profile => (
                     <div key={profile.timestamp}>
                         <Username profile={profile} />
@@ -16,7 +25,7 @@ class Post extends React.Component {
                         <CommentSection profile={profile} />
                     </div>
                 ))}
-            </div>
+            </PostDiv>
         )
     }
 }
