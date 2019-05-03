@@ -1,7 +1,34 @@
 import React from 'react'
+import styled from 'styled-components'
 
 import Likes from './Likes'
 import Comments from './Comments'
+
+const CommentsDiv = styled.div`
+    margin-top   : -5px;
+    padding-left : 1%;
+    border       : 1px solid lightgrey;
+    margin-bottom: 1%;
+`
+
+const AddCommentDiv = styled.div`
+    margin-left    : -1%;
+    border-top     : 1px solid lightgrey;
+    display        : flex;
+    align-items    : center;
+    justify-content: space-around;
+`
+
+const AddCommentForm = styled.form`
+    width: 90%;
+`
+
+const AddCommentInput = styled.input`
+    border       : none;
+    width        : 90%;
+    height       : 40px;
+    margin-bottom: 1%;
+`
 
 
 class CommentSection extends React.Component {
@@ -54,7 +81,7 @@ class CommentSection extends React.Component {
 
     render() {
         return (
-            <div className="comments">
+            <CommentsDiv>
                 <Likes like={this.addLike} post={this.state.likes} />
                 {this.state.comments.map(comment => (
                     <div key={comment.text}>
@@ -62,18 +89,18 @@ class CommentSection extends React.Component {
                     </div>
                 ))}
 
-                <div className="add-comment">
-                    <form onSubmit={this.handleSubmit}>
-                        <input
+                <AddCommentDiv>
+                    <AddCommentForm onSubmit={this.handleSubmit}>
+                        <AddCommentInput
                             onChange={this.handleChanges}
                             type="text"
                             placeholder="add a comment..."
-                        ></input>
-                    </form>
+                        ></AddCommentInput>
+                    </AddCommentForm>
                     <i className="fas fa-ellipsis-h"></i>
-                </div>
+                </AddCommentDiv>
 
-            </div>
+            </CommentsDiv>
         )
     }
 

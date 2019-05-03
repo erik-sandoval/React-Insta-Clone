@@ -8,7 +8,7 @@ const ImageImg = styled.img`
 const Image = props => {
     return (
         <>
-            <ImageImg src={props.profile.imageUrl} alt="instagram post"/>
+            <ImageImg src={props.profile.imageUrl} alt="instagram post" />
         </>
     )
 }

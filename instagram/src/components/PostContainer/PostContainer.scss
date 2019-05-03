@@ -1,43 +1,5 @@
-.comments {
+.far {
 
-    margin-top   : -5px;
-    padding-left : 1%;
-    border       : 1px solid lightgrey;
-    margin-bottom: 1%;
-
-    .likes {
-        font-weight: 700;
-
-        .far {
-            margin   : 1% 1% 0% 0%;
-            font-size: 25px;
-        }
-    }
-
-    .comment-user {
-        font-weight: 700;
-    }
-
-}
-
-.add-comment {
-    margin-left    : -1%;
-    border-top     : 1px solid lightgrey;
-    display        : flex;
-    align-items    : center;
-    justify-content: space-around;
-
-    form {
-        width: 90%;
-
-        input {
-            border       : none;
-            width        : 90%;
-            height       : 40px;
-            margin-bottom: 1%;
-
-        }
-
-    }
-
+    margin   : 1% 1% 1% 1%;
+    font-size: 25px;
 }
