@@ -5,6 +5,8 @@ const ImageImg = styled.img`
     margin-bottom: 0;
 `
 
+
+
 const Image = props => {
     return (
         <>

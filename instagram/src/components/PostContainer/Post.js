@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import Username from './Username'
 import Image from './Image'
-import CommentSection from './CommentSection/CommentSection';
+import CommentSection from '../CommentSection/CommentSection';
 import './PostContainer.scss'
 
 const PostDiv = styled.div`
@@ -15,6 +15,7 @@ const PostDiv = styled.div`
 `
 
 class Post extends React.Component {
+    
     render() {
         return (
             <PostDiv>

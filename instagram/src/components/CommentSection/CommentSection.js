@@ -32,28 +32,22 @@ const AddCommentInput = styled.input`
 
 
 class CommentSection extends React.Component {
-
-    constructor() {
-        super();
-        this.state = {
-            likes: '',
-            comments: [],
-            comment: {
-                username: '',
-                text: ''
-            }
-        }
+    state = {
+        comments:[],
+        comment: {
+            text: ''
+        },
+        likes: 0
     }
 
     componentDidMount() {
         this.setState({
-            likes: this.props.profile.likes,
-            comments: this.props.profile.comments
+            comments: this.props.profile.comments,
+            likes: this.props.profile.likes
         })
     }
 
     handleChanges = (event) => {
-
         this.setState({
             comment: {
                 username: localStorage.getItem('username'),
@@ -67,7 +61,6 @@ class CommentSection extends React.Component {
         this.setState({
             comments: [...this.state.comments, this.state.comment],
             comment: {
-                username: '',
                 text: ''
             }
         })
@@ -80,18 +73,22 @@ class CommentSection extends React.Component {
     }
 
     render() {
+
+        console.log(this.state)
         return (
             <CommentsDiv>
                 <Likes like={this.addLike} post={this.state.likes} />
-                {this.state.comments.map(comment => (
-                    <div key={comment.text}>
+                {this.state.comments.map((comment, index) => (
+                    <div key={index}>
                         <Comments post={comment} />
+                
                     </div>
                 ))}
 
                 <AddCommentDiv>
                     <AddCommentForm onSubmit={this.handleSubmit}>
                         <AddCommentInput
+                            value={this.state.comment.text}
                             onChange={this.handleChanges}
                             type="text"
                             placeholder="add a comment..."
