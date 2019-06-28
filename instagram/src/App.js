@@ -1,12 +1,17 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 
-function App() {
+import withAuthenticate from './authentication/withAuthenticate'
+import PostPage from './components/PostContainer/PostPage';
+import Login from './components/Login/Login';
+
+const ComponentFromWithAuthenticate = withAuthenticate(PostPage)(Login)
+
+function App(props){
   return (
-    <div className="App">
-
+    <div>
+      <ComponentFromWithAuthenticate loggedIn={props.toggle}/>
     </div>
-  );
+  )
 }
-
 export default App;
